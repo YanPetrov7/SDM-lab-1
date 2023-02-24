@@ -17,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/YanPetrov7/SPM-lab-1/issues"
   },
-  "homepage": "https://github.com/YanPetrov7/SPM-lab-1#readme"
+  "homepage": "https://github.com/YanPetrov7/SPM-lab-1#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  }
 }
