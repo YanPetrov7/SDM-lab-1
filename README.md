@@ -1,4 +1,4 @@
-# SPM-lab-1
+# SDM-lab-1
 ### Quadratic Equation Solver
 
 The program takes three parameters as input: a, b, and c, which represent the coefficients of a quadratic equation in the form of ax^2 + bx + c = 0.
