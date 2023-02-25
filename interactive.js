@@ -6,7 +6,14 @@ const questions = {
   c: 'c:',
 };
 
-const question = (text) => readlineSync.question(text);
+const question = (text) => {
+  let value = readlineSync.question(text);
+  if (isNaN(Number(value)) === true || value === '') {
+    console.error(`Error. Expected a valid real number, got '${value}' instead`);
+    value = question(text);
+  }
+  return value;
+};
 
 const interStart = () => {
   const firstValue = question(questions.a);
