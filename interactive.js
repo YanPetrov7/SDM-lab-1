@@ -17,10 +17,10 @@ const question = (text) => {
 
 const interStart = () => {
   const firstValue = question(questions.a);
-  const seccondValue = question(questions.b);
+  const secondValue = question(questions.b);
   const thirdValue = question(questions.c);
 
-  const arr = [firstValue, seccondValue, thirdValue];
+  const arr = [firstValue, secondValue, thirdValue];
 
   return arr;
 };
