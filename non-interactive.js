@@ -1,12 +1,14 @@
 const fs = require('fs');
 
-const result = [];
+const limit = 3;
+const sepatator = ' ';
 
-const text = fs.readFileSync('./numbers.txt', 'utf8');
-const arr = text.split('\n');
+const nonInterStart = () => {
+  const path = process.argv[2];
+  const text = fs.readFileSync(path, 'utf8');
+  const arr = text.split(sepatator, limit);
 
-for (const elem of arr) {
-  result.push(Number(elem));
-}
+  return arr;
+};
 
-module.exports = result;
+module.exports = nonInterStart;
