@@ -1,17 +1,21 @@
 const readlineSync = require('readline-sync');
 
-const result = [];
+const questions = {
+  a: 'a:',
+  b: 'b:',
+  c: 'c:',
+};
 
-const firstVariable = readlineSync.question('Enter variable (a):');
-const seccondVariable = readlineSync.question('Enter variable (b):');
-const thirdVariable = readlineSync.question('Enter variable (c):');
+const question = (text) => readlineSync.question(text);
 
-const arr = [firstVariable, seccondVariable, thirdVariable];
+const interStart = () => {
+  const firstValue = question(questions.a);
+  const seccondValue = question(questions.b);
+  const thirdValue = question(questions.c);
 
-for (const elem of arr) {
-  if (elem !== '') {
-    result.push(Number(elem));
-  }
-}
+  const arr = [firstValue, seccondValue, thirdValue];
 
-module.exports = result;
+  return arr;
+};
+
+module.exports = interStart;
