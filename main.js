@@ -1,14 +1,11 @@
-'use strict';
+const solveFunc = require('./solve');
+const interStart = require('./interactive');
+const nonInterStart = require('./non-interactive');
 
-const interRes = require('./interactive.js');
-const requiredLength = 3;
-const message = 'Program started with values (a,b,c):';
-
-if (interRes.length !== requiredLength) {
-    const nonInterRes = require('./non-interactive.js');
-    console.log(`${message} ${nonInterRes}`);
-    return solve(nonInterRes);
+let result;
+if (process.argv[2] !== undefined) {
+  result = nonInterStart();
+} else {
+  result = interStart();
 }
-
-console.log(`${message} ${interRes}`);
-solve(interRes)
+console.log(solveFunc(result));
