@@ -35,3 +35,5 @@ node main.js yourfile
 ## File format description for non-interactive mode
 - Program can use all text formats (tested with txt,md,xml and json).
 - The program will work correctly if the input format is like this: `(a)\s(b)\s(c)\n` where (a),(b),(c) are values of coefficients. For example `1 -4 2`.
+
+[Revert commit](https://github.com/YanPetrov7/SDM-lab-1/commit/2fd76988676ef624abf6976258ced9e2d63b87b5)
