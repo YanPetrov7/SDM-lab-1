@@ -14,7 +14,7 @@ const nonInterStart = () => {
 
   arr.forEach((elem) => {
     if (isNaN(Number(elem)) === true || elem === '') {
-      console.error(`Error. Expected a valid real number, got '${elem}' instead`);
+      console.error('invalid file format');
       process.exit(1);
     }
   });
